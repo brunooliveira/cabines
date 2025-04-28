@@ -36,7 +36,7 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [senha, setSenha] = useState(")
+  const [senha, setSenha] = useState("")
   
   // Estatísticas
   const [totalReservas, setTotalReservas] = useState(0)
