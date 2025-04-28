@@ -1,3 +1,4 @@
+import { useState } from 'react';
 
 // Dados dos centros de custo (baseado na imagem IMG_1181.jpeg)
 const centrosDeCusto = [
