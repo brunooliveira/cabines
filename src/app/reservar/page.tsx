@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react'
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
@@ -31,7 +32,7 @@ type Preco = {
   valor: number
 }
 
-export default function ReservarPage() {
+export function ReservarContent() {
   const searchParams = useSearchParams()
   const planoParam = searchParams.get('plano')
   
@@ -595,5 +596,13 @@ export default function ReservarPage() {
         </div>
       )}
     </div>
+  )
+}
+
+export default function ReservarPage() {
+  return (
+    <Suspense fallback={<div>Carregando...</div>}>
+      <ReservarContent />
+    </Suspense>
   )
 }
